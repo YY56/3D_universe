@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>3D宇宙效果</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+			list-style: none;
+		}
+		@-webkit-keyframes move{
+			from{-webkit-transform: rotateX(12deg) rotateY(0deg);}
+			to{-webkit-transform: rotateX(12deg) rotateY(360deg);}
+		}
+		body{
+		
+			-webkit-perspective:1000px;
+			background: url(images/bg.jpg) 0 0 no-repeat;
+			background-size: 100%;
+		}
+		.box{
+			-webkit-transform-style:preserve-3d;
+			position: relative;
+			margin: 170px auto 0;
+			width: 200px;
+			height: 200px;
+			-webkit-transform: rotateX(12deg) rotateY(0deg);
+			-webkit-animation: move 10s linear infinite;
+		}
+		.box:hover .maxbox li:nth-child(1){
+			-webkit-transform:translateZ(300px)
+		}
+		.box:hover .maxbox li:nth-child(2){
+			-webkit-transform: rotateY(90deg) translateZ(300px)
+		}
+		.box:hover .maxbox li:nth-child(3){
+			-webkit-transform: rotateY(180deg) translateZ(300px)
+		}
+		.box:hover .maxbox li:nth-child(4){
+			-webkit-transform: rotateY(270deg) translateZ(300px)
+		}
+		.box:hover .maxbox li:nth-child(5){
+			-webkit-transform: rotateX(90deg) translateZ(200px)
+		}
+		.box:hover .maxbox li:nth-child(6){
+			-webkit-transform: rotateX(-90deg) translateZ(200px)
+		}
+		.maxbox{
+			-webkit-transform-style:preserve-3d;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 200px;
+			height: 200px;
+		}
+		.maxbox li{
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 200px;
+			height: 200px;
+			opacity: 0.4;
+			-webkit-transition:all 1s;
+		}
+		.maxbox li:nth-child(1){
+			background: #eee;
+			-webkit-transform:translateZ(100px);
+		}
+		.maxbox li:nth-child(2){
+			background: #eee;
+			-webkit-transform: rotateY(90deg) translateZ(100px);
+		}
+		.maxbox li:nth-child(3){
+			background: #eee;
+			-webkit-transform: rotateY(180deg) translateZ(100px);
+		}
+		.maxbox li:nth-child(4){
+			background: #eee;
+			-webkit-transform: rotateY(270deg) translateZ(100px);
+		}
+		.maxbox li:nth-child(5){
+			background: #eee;
+			-webkit-transform: rotateX(90deg) translateZ(100px);
+		}
+		.maxbox li:nth-child(6){
+			background: #eee;
+			-webkit-transform: rotateX(-90deg) translateZ(100px);
+		}
+		.minbox{
+			-webkit-transform-style: preserve-3d;
+			position: absolute;
+			top: 50px;
+			left: 50px;
+			width: 100px;
+			height: 100px;
+		}
+		.minbox li{
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100px;
+			height: 100px;
+		}
+		.minbox li:nth-child(1){
+			background: url(images/01.png) 0 0 no-repeat;
+			-webkit-transform:translateZ(50px);
+		}
+		.minbox li:nth-child(2){
+			background: url(images/02.png) 0 0 no-repeat;
+			-webkit-transform: rotateY(90deg) translateZ(50px);
+		}
+		.minbox li:nth-child(3){
+			background: url(images/03.png) 0 0 no-repeat;
+			-webkit-transform: rotateY(180deg) translateZ(50px);
+		}
+		.minbox li:nth-child(4){
+			background: url(images/04.png) 0 0 no-repeat;
+			-webkit-transform: rotateY(270deg) translateZ(50px);
+		}
+		.minbox li:nth-child(5){
+			background: url(images/05.png) 0 0 no-repeat;
+			-webkit-transform: rotateX(90deg) translateZ(50px);
+		}
+		.minbox li:nth-child(6){
+			background: url(images/06.png) 0 0 no-repeat;
+			-webkit-transform: rotateX(-90deg) translateZ(50px);
+		}
+
+	</style>
+</head>
+<body>
+	<div class="box">
+		<ul class="maxbox">
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+		<ul class="minbox">
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+	</div>
+	
+</body>
+</html>
